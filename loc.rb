@@ -53,6 +53,7 @@ repos.each do |repo|
 
   _output, _status = cloc destination, '--quiet', "--report-file=#{report_file}"
   reports.push(report_file) if File.exist?(report_file) && status.exitstatus.zero?
+  sleep(1)
 end
 
 puts 'Done. Summing...'
